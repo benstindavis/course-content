@@ -1,0 +1,12 @@
+read x;
+read y;
+
+n = x;
+i = 0;
+repeatIf(n<=y){
+    if(n%7==0||n%8==0){
+        i = i + 1; 
+    }
+}
+
+print(i)

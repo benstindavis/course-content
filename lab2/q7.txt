@@ -1,0 +1,10 @@
+read x;
+read y;
+
+power  = 1;
+
+repeat(y){
+    power = power*x;
+}
+
+print(power);

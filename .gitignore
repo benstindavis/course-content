@@ -1,0 +1,15 @@
+# images 
+*.jpeg
+*.png 
+
+# documents 
+*.pdf
+
+# zips
+*.zip
+
+# executables
+*.exe
+
+
+

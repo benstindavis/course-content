@@ -1,0 +1,13 @@
+read n;
+
+
+repeatRange(i,1,10){
+    print(n);
+    print("x");
+    print(i);
+    print("=");
+    print(n*i);
+    print("\n");
+    
+
+}
