@@ -17,12 +17,21 @@ char* toLowerCase(char* str)
 
 int checkPangram(char* str) {
     toLowerCase(str);
-    for (char check = 'a'; check <= 'z';check++) {
+    int isPangram = 1;
+    for (char ch = 'a'; ch <= 'z';ch++) {
+        int chCount = 0;
         for (int i = 0; str[i] != '\0';i++) {
-
+            if(str[i] == ch){
+                chCount++;
+                break;
+            }
+        }
+        if(chCount==0){
+            isPangram = 0;
+            break;
         }
     }
-
+    return isPangram;    
 }
 
 int main() {
