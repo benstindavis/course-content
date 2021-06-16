@@ -74,14 +74,19 @@ char *removeStringSpace(char *str)
     int len = stringLength(str);
 
     int spaces = 0;
-
-    for (int i = 0; str[i] != '\0'; i++)
+    int j;
+    for ( j = 0; str[j] != '\0'; j++)
     {
-        if (str[i] != '0')
+        if (str[j] != '0')
         {
-            spaces = i;
+            spaces = j;
             break;
         }
+    }
+    if(j>1&&spaces==0){
+        str[1] = '\0';
+
+        return str;
     }
     int i;
     for (i = spaces; str[i] != '\0'; i++)
