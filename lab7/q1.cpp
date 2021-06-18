@@ -57,7 +57,7 @@ int main() {
     }
     cout<<endl;
     cout<<"Sorted Array"<<endl;
-    sortNumbers(arr, 0 , n-1);
+    sortNumbers(arr, 1 , n-1);
     for (int i = 0; i < n;i++) {
         printf("%d ", arr[i]);
     }

@@ -11,6 +11,8 @@ int stringLength(char *str)
     return i;
 }
 
+
+// I didnt use this function
 void makeStringLengthEqual(char *a, char *b)
 {
     /*
