@@ -60,5 +60,8 @@ int main()
     cin >> givenCourse;
 
     cout << findStudentCount(c, m, cSize, mSize, givenCourse);
+
+    delete [] c;
+    delete [] m;
     return 0;
 }
