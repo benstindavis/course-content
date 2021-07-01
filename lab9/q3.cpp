@@ -23,7 +23,12 @@ struct students
 
 
 int findStudentName(course c[],marks m[],students s[], int cSize, int mSize, int sSize, char requiredCourse[]){
-    
+    int requiredCourseId;
+    for(int i = 0; i <cSize;i++){
+        if(strcmp(requiredCourse,c[i].courseName)==0){
+            requiredCourseId = 
+        }
+    }
 }
 
 int main()
