@@ -20,7 +20,7 @@ int findStudentCount(course c[], marks m[], int cSize, int mSize, char requiredC
     int requiredCourseID;
     for(int i = 0; i<cSize;i++){
         if(strcmp(requiredCourse,c[i].courseName)==0){
-            requiredCourseID = i;
+            requiredCourseID = c[i].courseId;
             break;
         }
     }
