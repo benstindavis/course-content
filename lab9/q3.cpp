@@ -21,14 +21,43 @@ struct students
     char studentName[20];
 };
 
-
-int findStudentName(course c[],marks m[],students s[], int cSize, int mSize, int sSize, char requiredCourse[]){
+char *findStudentName(course c[], marks m[], students s[], int cSize, int mSize, int sSize, char requiredCourse[])
+{
     int requiredCourseId;
-    for(int i = 0; i <cSize;i++){
-        if(strcmp(requiredCourse,c[i].courseName)==0){
-            requiredCourseId = 
+    for (int i = 0; i < cSize; i++)
+    {
+        if (strcmp(requiredCourse, c[i].courseName) == 0)
+        {
+            requiredCourseId = c[i].courseId;
+            break;
         }
     }
+
+    int requiredStudentId;
+    int maxMark = 0;
+    for (int i = 0; i < mSize; i++)
+    {
+        if (m[i].courseId == requiredCourseId)
+        {
+            if (maxMark <= m[i].mark)
+            {
+                requiredStudentId = m[i].studentId;
+                maxMark = m[i].mark;
+            }
+        }
+    }
+
+    char requiredStudentName[100];
+    for (int i = 0; i < sSize; i++)
+    {
+        if (requiredStudentId == s[i].studentId)
+        {
+            strcpy(requiredStudentName,s[i].studentId);
+            break;
+        }
+    }
+
+    return requiredStudentName;
 }
 
 int main()
@@ -54,7 +83,7 @@ int main()
         cin >> m[i].studentId >> m[i].courseId >> m[i].mark;
     }
 
-        for (int i = 0; i < cSize; i++)
+    for (int i = 0; i < cSize; i++)
     {
         cin >> c[i].courseId >> c[i].courseName;
     }
@@ -67,13 +96,11 @@ int main()
     char givenCourse[10];
     cin >> givenCourse;
 
-    cout<< findStudentName(c,m,s,cSize,mSize,sSize,givenCourse)<<endl;
+    cout << findStudentName(c, m, s, cSize, mSize, sSize, givenCourse) << endl;
 
-    delete [] c;
-    delete [] m;
-    delete [] s;
+    delete[] c;
+    delete[] m;
+    delete[] s;
 
     return 0;
-
-
 }
