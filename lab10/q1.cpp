@@ -20,11 +20,11 @@ node* newNode(int ele){
 
 
 
-node* addNodeToLL(node *head,int ele){
+node* addNodeToLL(node *tail,int ele){
     //returns new head;
     node *n;
     n = newNode(ele);
-    n->next = head;
+    tail->next = n;
     return n;
 }
 
@@ -42,13 +42,14 @@ void displayLL(node* head){
 
 
 int main(){
-    node *head;
+    node *head,*tail;
     int n;
     cin>>n;
     head = newNode(n);
+    tail = head;
     while(n!=-1){
         cin>>n;
-        head = addNodeToLL(head,n);
+        tail = addNodeToLL(tail,n);
     }
 
     cout<<"output"<<endl;
