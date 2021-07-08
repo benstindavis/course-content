@@ -41,6 +41,15 @@ void displayLL(node* head){
 }
 
 
+void displayLLrev(node* head){
+    if(head!=NULL){
+        displayLLrev(head->next);
+        cout<<head->data;
+        cout<<" ";
+    }    
+}
+
+
 int main(){
     node *head,*tail;
     int n;
@@ -54,5 +63,7 @@ int main(){
 
     cout<<"output"<<endl;
     displayLL(head);
+    cout<<endl;
+    displayLLrev(head);
     return 0;
 }
