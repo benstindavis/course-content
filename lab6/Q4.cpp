@@ -53,6 +53,9 @@ void makeStringLengthEqual(char *a, char *b)
     }
 }
 
+
+
+
 char *makeStringLength100(char *str)
 {
     int t = stringLength(str);
