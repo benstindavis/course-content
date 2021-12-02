@@ -10,7 +10,7 @@ module SR_Latch (
 
 );
 
-always@(posedge clk or reset)
+always@(posedge clk or posedge reset)
 begin
 if(reset)
 begin
