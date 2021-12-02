@@ -9,7 +9,7 @@ module T_FlipFlop(
     output reg Q
 
 );
-always@(posedge clk or posedge reset) 
+always@(negedge clk or posedge reset) 
 begin
     if(reset == 1)
         Q <= 1'b0;

@@ -6,7 +6,6 @@ module JK_FlipFlop(
     input reset,
     input J,
     input K,
-
     output reg Q
 
 );
