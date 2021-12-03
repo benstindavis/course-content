@@ -1,6 +1,6 @@
 // WARNING : This code has not been tested!!!
 // N bit Synchronous up counter using T Flip Flops
-
+// Only till 4 bits
 
 module Counter_Nbit_Sync #(
     parameter N = 4
