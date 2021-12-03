@@ -10,7 +10,7 @@ module D_FlipFlop_PC(
     output reg Q
 
 );
-always@(negedge clk or preset or clear) 
+always@(negedge clk) 
 begin
     if (clear == 0)
         Q <= 1'b0;
