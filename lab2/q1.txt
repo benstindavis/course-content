@@ -1,0 +1,13 @@
+read  n;
+
+if(n){
+    if(n>0){
+        print("Greater than 0");
+    }
+    else{
+        print("Less than 0");
+    }
+}
+else{
+    print("Equal to 0");
+}

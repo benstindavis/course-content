@@ -1,0 +1,24 @@
+read x;
+read y;
+
+maxFac = 1;
+
+if(x<y){
+    repeatRange(i,1,x){
+        if((x%i==0)&&(y%i==0)){
+            maxFac = i
+        }
+        
+    }
+}
+
+else{
+    repeatRange(i,1,y){
+        if((x%i==0)&&(y%i==0)){
+            maxFac = i
+        }
+        
+    }
+}
+
+print(maxFac)

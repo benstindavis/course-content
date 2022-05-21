@@ -1,0 +1,10 @@
+read x;
+read y;
+
+if(x/y){
+    print(y);
+}
+
+else{
+    print(x);
+}

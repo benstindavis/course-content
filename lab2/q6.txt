@@ -1,0 +1,9 @@
+read n;
+
+fac = 1;
+
+repeat(n){
+    fac = fac*n;
+}
+
+print (fac); 

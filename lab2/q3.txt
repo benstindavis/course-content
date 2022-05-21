@@ -1,0 +1,9 @@
+read n;
+
+sum = 0;
+
+repeat(n){
+    sum = sum +n*n*n*n;
+}
+
+print(sum)
